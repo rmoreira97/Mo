@@ -8,8 +8,8 @@ function GorillaSelection() {
   const navigate = useNavigate();
   const [isBackButtonVisible, setIsBackButtonVisible] = useState(false);
   const gorillaImages = [
-    { url: '/Assets/images/GorillaSelection/Momotaro.png', id: 1 },
-    { url: '/Assets/images/GorillaSelection/Genki.png', id: 2 },
+    { url: '/Assets/images/GorillaSelection/Momotaro.png', id: 2 },
+    { url: '/Assets/images/GorillaSelection/Genki.png', id: 1 },
     { url: '/Assets/images/GorillaSelection/Gentaro.png', id: 3 },
     { url: '/Assets/images/GorillaSelection/Kintaro.png', id: 4 }
   ];
