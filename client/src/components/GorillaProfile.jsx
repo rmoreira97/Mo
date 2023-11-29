@@ -1,12 +1,15 @@
 // GorillaProfile.js
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/GorillaProfile.css';
-import { Helmet } from 'react-helmet';
+// import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+// import { storage } from '../firebaseConfig'; // Adjust the import path as necessary
+import { Post } from './Post'; // for named import // Assuming that both GorillaProfile.jsx and Post.jsx are in the same directory
+
 
 // SVG Icons
 const GenderIcon = '/Assets/images/person.svg';
@@ -19,7 +22,6 @@ function GorillaProfile() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
-  const [editedBio, setEditedBio] = useState('');
   const [editedGallery, setEditedGallery] = useState([]);
   const [newGalleryUrl, setNewGalleryUrl] = useState('');
   const isAdmin = true; // Replace with actual admin check
@@ -27,8 +29,17 @@ function GorillaProfile() {
   const [initialPosition, setInitialPosition] = useState({ x: 0, y: 0 });
   const galleryRef = useRef(null);
   const [activeTab, setActiveTab] = useState('profile')
-  
   const timelineRef = useRef(null);
+  // const [posts, setPosts] = useState([]);
+  // const [caption, setCaption] = useState('');
+  // const [file, setFile] = useState(null);
+
+
+
+
+
+ 
+
 
   function FadeInSection(props) {
     const [isVisible, setVisible] = useState(false);
@@ -66,7 +77,8 @@ function GorillaProfile() {
       </div>
     );
   }
-   
+  
+  
   useEffect(() => {
     const gorillaId = parseInt(id, 10);
     if (isNaN(gorillaId)) {
@@ -80,7 +92,6 @@ function GorillaProfile() {
       .then(data => {
         console.log('Received data:', data); // Log the data object
         setGorilla(data);
-        setEditedBio(data.Bio);
         setEditedGallery(data.Gallery || []);
         setLoading(false);
       })
@@ -90,15 +101,16 @@ function GorillaProfile() {
       });
   }, [id]);
 
+
+  
   const openEditor = () => {
     setIsEditing(true);
-    // When opening the editor, initialize the edited states with current data
-    setEditedBio(gorilla.Bio);
+    
     setEditedGallery(gorilla.Gallery);
   };
   const closeEditor = () => setIsEditing(false);
 
-  const handleBioChange = (e) => setEditedBio(e.target.value);
+  
   const handleNewGalleryUrlChange = (e) => setNewGalleryUrl(e.target.value);
 
   const handleAddGalleryUrl = () => {
@@ -112,7 +124,6 @@ function GorillaProfile() {
     // Assuming your backend expects an object with Bio and Gallery properties
     const updatedGorilla = {
       ...gorilla,
-      Bio: editedBio,
       Gallery: editedGallery,
     };
 
@@ -201,15 +212,13 @@ function GorillaProfile() {
           </div>
         );
       
-  case 'posts': // Adding the 'posts' case
-      return (
-        <div className="posts-section">
-          <p>Posts coming soon...</p>
-        </div>
-      );
-
-    default:
-      return null;
+        
+        case 'posts':
+  return (
+    <Post gorillaId={id} />
+  );
+default:
+  return null;
   }
 };
 
@@ -301,7 +310,7 @@ function GorillaProfile() {
         <div className="tabs">
   <button onClick={() => handleTabClick('profile')} className={`btn btn-outline-primary ${activeTab === 'profile' ? 'active-tab' : ''}`}>Profile</button>
   <button onClick={() => handleTabClick('gallery')} className={`btn btn-outline-primary ${activeTab === 'gallery' ? 'active-tab' : ''}`}>Gallery</button>
-  <button onClick={() => handleTabClick('posts')} className={`btn btn-outline-primary ${activeTab === 'videos' ? 'active-tab' : ''}`}>Posts</button>
+  <button onClick={() => handleTabClick('posts')} className={`btn btn-outline-primary ${activeTab === 'posts' ? 'active-tab' : ''}`}>Posts</button>
   <button onClick={() => handleTabClick('videos')} className={`btn btn-outline-primary ${activeTab === 'videos' ? 'active-tab' : ''}`}>Videos</button>
 </div>
     
@@ -371,8 +380,6 @@ function GorillaProfile() {
       </div>
     </div>
   );
-                }
+}
 
-                
-
-export default GorillaProfile;
+                export default GorillaProfile;

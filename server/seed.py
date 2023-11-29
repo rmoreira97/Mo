@@ -3,16 +3,15 @@ from app import create_app
 from extensions import db
 from models import MomoFamily
 from datetime import datetime
+import json
 
 app = create_app()
 
-
 def seed_database():
     with app.app_context():  # Enter the application context
-        # Create the database tables (only do this once, not every time you seed)
-        db.create_all()
+        db.create_all()  # Create the database tables (only do this once, not every time you seed)
 
-        # Add your JSON data here to populate the database
+        # Define your data here...
         data = [
    
  {
@@ -32,6 +31,83 @@ def seed_database():
       "https://i.ytimg.com/vi/qoygtJASsqo/maxresdefault.jpg",
       "https://i.redd.it/2mgyw3c1mj961.jpg"
    ],
+   "Posts": 
+   [
+  {
+    "PostID": "1",
+    "Date": "2023-11-28 10:30 AM",
+    "Caption": "Enjoying a beautiful day at Kyoto City Zoo!",
+    "Media": {
+      "Url": "https://example.com/post1.jpg",
+      "Type": "image"
+    }
+  },
+  {
+    "PostID": "2",
+    "Date": "2023-11-27 04:45 PM",
+    "Caption": "Family time with Genki and Kintaro!",
+    "Media": {
+      "Url": "https://example.com/post2.jpg",
+      "Type": "image"
+    }
+  },
+  {
+    "PostID": "3",
+    "Date": "2023-11-26 08:15 AM",
+    "Caption": "Looking back at my journey at Kyoto City Zoo. #memories",
+    "Media": {
+      "Url": "https://example.com/post3.jpg",
+      "Type": "image"
+    }
+  },
+  {
+    "PostID": "4",
+    "Date": "2023-11-25 02:00 PM",
+    "Caption": "Just hanging out with Annie from Higashiyama Zoo!",
+    "Media": {
+      "Url": "https://example.com/post4.jpg",
+      "Type": "image"
+    }
+  },
+  {
+    "PostID": "5",
+    "Date": "2023-11-24 09:45 AM",
+    "Caption": "A sunny day with my gorilla friends. 🌞",
+    "Media": {
+      "Url": "https://example.com/post5.jpg",
+      "Type": "image"
+    }
+  },
+  {
+    "PostID": "6",
+    "Date": "2023-11-23 05:20 PM",
+    "Caption": "Exploring the jungle today. Such a fascinating place!",
+    "Media": {
+      "Url": "https://example.com/post6.jpg",
+      "Type": "image"
+    }
+  },
+  {
+    "PostID": "7",
+    "Date": "2023-11-22 11:10 AM",
+    "Caption": "Gorilla playtime! 🦍",
+    "Media": {
+      "Url": "https://example.com/post7.jpg",
+      "Type": "image"
+    }
+  },
+  {
+    "PostID": "8",
+    "Date": "2023-11-21 03:55 PM",
+    "Caption": "Relaxing in my favorite spot. Peace and tranquility. 🌿",
+    "Media": {
+      "Url": "https://example.com/post8.jpg",
+      "Type": "image"
+    }
+  }
+
+],
+   
    "Bio":{
       "Feature":"Genki was born at Kyoto City Zoo. Her parents were Makk and Hiromi. In her youth, Genki was known for being a bit of a troublemaker, which posed challenges for Hiromi in raising her. Genki was moved to Ueno in Tokyo for a breeding project, where she encountered Biju, a male gorilla who was initially compatible with her until Momoko entered the scene. Biju fell for Momoko, affecting his relationship with Genki, leading to Genki's emotional struggles. She became mentally unstable and even resorted to self-mutilation, a behavior that continued after her return to Kyoto Zoo. Her return was necessitated by the significant weight loss and danger to her life. Genki would pick at her hands and feet during this time. However, the reunion with her mother, Hiromi, helped her regain her original weight and mental stability. The turning point in Genki's life was her meeting with Momotaro, who turns out to be the son of Genki's former lover, Biju, and her rival, Momoko. Prior to their meeting, the Kyoto City Zoo had shown her images of Momotaro in order to prepare her for his arrival and study her reactions. Their encounter was swift, and they fell in love quickly, with Genki seeing shades of her past love, Biju, in Momotaro. Now, Genki has two sons, Gentaro and Kintaro, and has been an excellent partner for Momotaro. She is known for having a big appetite, which could be attributed to her love for food and potential digestion issues."
    },
@@ -90,6 +166,83 @@ def seed_database():
       "https://i.pinimg.com/originals/71/06/15/71061590e8f78f5501af7a91f3ac10a1.png",
       "https://pds.exblog.jp/pds/1/201710/11/39/e0363539_20575501.jpg"
    ],
+   
+   "Posts": 
+   [
+  {
+    "PostID": "1",
+    "Date": "2023-11-28 10:30 AM",
+    "Caption": "Enjoying a beautiful day at Kyoto City Zoo!",
+    "Media": {
+      "Url": "https://example.com/post1.jpg",
+      "Type": "image"
+    }
+  },
+  {
+    "PostID": "2",
+    "Date": "2023-11-27 04:45 PM",
+    "Caption": "Family time with Genki and Kintaro!",
+    "Media": {
+      "Url": "https://example.com/post2.jpg",
+      "Type": "image"
+    }
+  },
+  {
+    "PostID": "3",
+    "Date": "2023-11-26 08:15 AM",
+    "Caption": "Looking back at my journey at Kyoto City Zoo. #memories",
+    "Media": {
+      "Url": "https://example.com/post3.jpg",
+      "Type": "image"
+    }
+  },
+  {
+    "PostID": "4",
+    "Date": "2023-11-25 02:00 PM",
+    "Caption": "Just hanging out with Annie from Higashiyama Zoo!",
+    "Media": {
+      "Url": "https://example.com/post4.jpg",
+      "Type": "image"
+    }
+  },
+  {
+    "PostID": "5",
+    "Date": "2023-11-24 09:45 AM",
+    "Caption": "A sunny day with my gorilla friends. 🌞",
+    "Media": {
+      "Url": "https://example.com/post5.jpg",
+      "Type": "image"
+    }
+  },
+  {
+    "PostID": "6",
+    "Date": "2023-11-23 05:20 PM",
+    "Caption": "Exploring the jungle today. Such a fascinating place!",
+    "Media": {
+      "Url": "https://example.com/post6.jpg",
+      "Type": "image"
+    }
+  },
+  {
+    "PostID": "7",
+    "Date": "2023-11-22 11:10 AM",
+    "Caption": "Gorilla playtime! 🦍",
+    "Media": {
+      "Url": "https://example.com/post7.jpg",
+      "Type": "image"
+    }
+  },
+  {
+    "PostID": "8",
+    "Date": "2023-11-21 03:55 PM",
+    "Caption": "Relaxing in my favorite spot. Peace and tranquility. 🌿",
+    "Media": {
+      "Url": "https://example.com/post8.jpg",
+      "Type": "image"
+    }
+  }
+
+],
    "Bio":{
       "Feature":"Momotaro was born in Ueno Zoo in Tokyo, his mother being Momoko, who is also the mother of Sumomo. He is Momoko's first child, and his father was Biju, who passed away at the age of 12. Unfortunately, Momotaro never had the chance to see his father as he was born after Biju's death. At that time, Ueno Zoo had a gathering of many gorillas from across Japan, and Genki was among them. Initially, Genki and other female gorillas were Biju's partners, but things changed when Momoko joined the herd after Biju fell for her. Momoko and Momotaro spent their time together as mother and child after Biju's demise, which meant Momotaro had never interacted with other gorillas, except for a brief period with a female gorilla named Laura. Over time, Momoko and Momotaro moved between Ueno and Chiba. Upon returning to Ueno, Momoko was living with a male gorilla, leaving Momotaro alone. Then, the day came for Momotaro to leave for the Kyoto City Zoo. Some interesting facts about Momotaro include his aversion to soil, which likely stems from growing up on concrete. He also has a strong attachment to food, as he never had to compete for it due to his upbringing. Additionally, Momotaro dislikes helmets, likely due to a traumatic experience during his move from Ueno to Kyoto. His drumming behavior is relatively rare, occurring around 10 times a year and more commonly when Gentaro is drumming. As for Momotaro's interactions with female gorillas, it's suggested that his lack of experience living with other gorillas may be a significant factor. However, with his current living situation alongside Genki and his two sons, Gentaro and Kintaro, it's unlikely that he is inherently bad with female gorillas."
    },
@@ -141,6 +294,82 @@ def seed_database():
       "https://pbs.twimg.com/media/E1MW7KYXIAItCV9?format=jpg&name=large",
       "https://pbs.twimg.com/media/FHEfdjXWYAkX2kp.jpg:large"
    ],
+   
+   "Posts": [
+   {
+    "PostID": "1",
+    "Date": "2023-11-28 10:30 AM",
+    "Caption": "A show of force!.... Gorillas avoid looking eachother in the eye, as it is a sign of aggression and here, Gentaro was simply testing the waters...",
+    "Media": {
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F3%2Fyqdf6z.mp4?alt=media&token=02e9621e-74dd-4d2e-9a35-d5567bf86bb7",
+      "Type": "video"
+    }
+  },
+  {
+    "PostID": "2",
+    "Date": "2023-11-27 04:45 PM",
+    "Caption": "Family time with Genki and Kintaro!",
+    "Media": {
+      "Url": "https://example.com/post2.jpg",
+      "Type": "image"
+    }
+  },
+  {
+    "PostID": "3",
+    "Date": "2023-11-26 08:15 AM",
+    "Caption": "Looking back at my journey at Kyoto City Zoo. #memories",
+    "Media": {
+      "Url": "https://example.com/post3.jpg",
+      "Type": "image"
+    }
+  },
+  {
+    "PostID": "4",
+    "Date": "2023-11-25 02:00 PM",
+    "Caption": "Just hanging out with Annie from Higashiyama Zoo!",
+    "Media": {
+      "Url": "https://example.com/post4.jpg",
+      "Type": "image"
+    }
+  },
+  {
+    "PostID": "5",
+    "Date": "2023-11-24 09:45 AM",
+    "Caption": "A sunny day with my gorilla friends. 🌞",
+    "Media": {
+      "Url": "https://example.com/post5.jpg",
+      "Type": "image"
+    }
+  },
+  {
+    "PostID": "6",
+    "Date": "2023-11-23 05:20 PM",
+    "Caption": "Exploring the jungle today. Such a fascinating place!",
+    "Media": {
+      "Url": "https://example.com/post6.jpg",
+      "Type": "image"
+    }
+  },
+  {
+    "PostID": "7",
+    "Date": "2023-11-22 11:10 AM",
+    "Caption": "Gorilla playtime! 🦍",
+    "Media": {
+      "Url": "https://example.com/post7.jpg",
+      "Type": "image"
+    }
+  },
+  {
+    "PostID": "8",
+    "Date": "2023-11-21 03:55 PM",
+    "Caption": "Relaxing in my favorite spot. Peace and tranquility. 🌿",
+    "Media": {
+      "Url": "https://example.com/post8.jpg",
+      "Type": "image"
+    }
+  }
+
+],
    "Bio":{
       "Feature":"Gentaro was born in Kyoto City Zoo at 12:12 am on December 21st, 2011, making him the first child born between two gorillas born in Japan. Initially, Gentaro faced challenges in getting enough milk from his mother, Genki, which led to him being artificially fed. However, the zookeepers introduced Gentaro to Genki so that he could eventually return to his family. Their reunion had its initial challenges, with Genki needing time to figure out how to interact with Gentaro, and vice versa. Despite being mother and child, they were sometimes separated at night during this period. However, this separation didn't last long, and Genki quickly resumed her role as Gentaro's caregiver. Gentaro's upbringing differed from that of human babies, as gorilla infants spend 24 hours a day with their mothers during their first year. It's also mentioned that Gentaro might become a silverback when he's older, but the exact timing is uncertain and may depend on various factors. Additionally, the question of when Gentaro will leave his family remains unanswered and is subject to negotiations between zoos. There's also speculation about Gentaro potentially partnering with Annie from Higashiyama Zoo, although discussions among zoos play a significant role in these decisions.."
    },
@@ -192,7 +421,81 @@ def seed_database():
       "https://i.ytimg.com/vi/Z2DnBFtqbto/maxresdefault.jpg",
       "https://i.pinimg.com/736x/ec/10/2a/ec102ac948632962afcdeeab120bbbef.jpg",
       "https://yt3.googleusercontent.com/MG-pAdNp8brlUGFp0LVI8PV5oGQ20BYk2EdNHeoJ81KS5wPM_io9fF1xxqQGiKbDgBGrWW_h=s900-c-k-c0x00ffffff-no-rj"
-   ],
+   ],"Posts": [
+  {
+    "PostID": "1",
+    "Date": "2023-11-28 10:30 AM",
+    "Caption": "Kintaro with his Dad, Momotaro!",
+    "Media": {
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F4%2Fmaxresdefault%20(1).jpg?alt=media&token=edbb69f8-d5bf-43d5-9dd2-67b2968224e1",
+      "Type": "image"
+    }
+  },
+  {
+    "PostID": "2",
+    "Date": "2023-11-27 04:45 PM",
+    "Caption": "A few years later with his Dad..",
+    "Media": {
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F4%2FEyTF7utWQAgWTMN.jpg?alt=media&token=8fe10488-4680-43d4-8ebc-1f1b132bf84b",
+      "Type": "image"
+    }
+  },
+  {
+    "PostID": "3",
+    "Date": "2023-11-26 08:15 AM",
+    "Caption": "Looking back at my journey at Kyoto City Zoo. #memories",
+    "Media": {
+      "Url": "https://example.com/post3.jpg",
+      "Type": "image"
+    }
+  },
+  {
+    "PostID": "4",
+    "Date": "2023-11-25 02:00 PM",
+    "Caption": "Just hanging out with Annie from Higashiyama Zoo!",
+    "Media": {
+      "Url": "https://example.com/post4.jpg",
+      "Type": "image"
+    }
+  },
+  {
+    "PostID": "5",
+    "Date": "2023-11-24 09:45 AM",
+    "Caption": "A sunny day with my gorilla friends. 🌞",
+    "Media": {
+      "Url": "https://example.com/post5.jpg",
+      "Type": "image"
+    }
+  },
+  {
+    "PostID": "6",
+    "Date": "2023-11-23 05:20 PM",
+    "Caption": "Exploring the jungle today. Such a fascinating place!",
+    "Media": {
+      "Url": "https://example.com/post6.jpg",
+      "Type": "image"
+    }
+  },
+  {
+    "PostID": "7",
+    "Date": "2023-11-22 11:10 AM",
+    "Caption": "Gorilla playtime! 🦍",
+    "Media": {
+      "Url": "https://example.com/post7.jpg",
+      "Type": "image"
+    }
+  },
+  {
+    "PostID": "8",
+    "Date": "2023-11-21 03:55 PM",
+    "Caption": "Relaxing in my favorite spot. Peace and tranquility. 🌿",
+    "Media": {
+      "Url": "https://example.com/post8.jpg",
+      "Type": "image"
+    }
+  }
+
+],
    "Bio":{
       "Feature":"Kintaro was born in Kyoto City Zoo on December 19th, 2018. He is the son of Momotaro and Genki, making him a valuable addition to the gorilla family. Kintaro was raised by his mother, Genki, but his milk intake required supplementation during his early years due to Genki's low milk production. Despite this, Kintaro observed how Momotaro and Gentaro interacted and showed great progress in becoming a strong, independent gorilla despite his age and initial trials in life. He has a strong-willed and caring nature, becoming a cherished member of the family. Kintaro's journey as a young gorilla is just beginning, and he holds a special place in the hearts of those who follow the family's story.."
    },
@@ -214,19 +517,23 @@ def seed_database():
    }
 }
 ]
-        # Seed the data into the database
+# Seed the data into the database
         for item in data:
+            # Check if 'Posts' key exists in the dictionary
+            if 'Posts' in item:
+                # Convert the "Posts" field to JSON format if it exists
+               posts_data = item['Posts']
+            else:
+                # Handle the case where 'Posts' key does not exist
+                posts_data = []  # Assign an empty list if 'Posts' is not present
+            
             gorilla = MomoFamily(**item)
             db.session.add(gorilla)
 
-        # Commit the changes to the database
-        db.session.commit()
+        db.session.commit()  # Commit the changes to the database
+        db.session.close()  # Close the database session
 
-        # Close the database connection
-        db.session.close()
-
-        print("Database seeded successfully!")
+    print("Database seeded successfully!")
 
 if __name__ == '__main__':
-    with app.app_context():
-        seed_database()
+    seed_database()

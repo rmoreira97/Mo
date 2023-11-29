@@ -729,6 +729,27 @@ div.content h2 {
     background-color: #c82333; /* Darker red on hover */
   }
   
+
+  .posts-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .post {
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 8px;
+  }
+  
+  .post-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 8px;
+  }
+
+
   /* Adjustments for smaller screens */
   @media (max-width: 768px) {
     .modal-content {
