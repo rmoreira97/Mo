@@ -261,18 +261,18 @@ default:
         <div className="about-role">
           {gorilla.About.role.join(', ')} {/* Join roles with a comma */}
         </div>
-        <div className="about-item">
-          <img src={GenderIcon} alt="Gender" className="about-icon" />
-          <span className="about-text">{gorilla.About.gender}</span>
-        </div>
-        <div className="about-item">
-          <img src={BirthdayIcon} alt="Birthdate" className="about-icon" />
-          <span className="about-text">{`Born ${gorilla.About.birthdate}`}</span>
-        </div>
-        <div className="about-item">
-          <img src={LocationIcon} alt="Location" className="about-icon" />
-          <span className="about-text">{gorilla.About.location}</span>
-        </div>
+        <div className="about-item about-item-gender">
+  <img src={GenderIcon} alt="Gender" className="about-icon" />
+  <span className="about-text">{gorilla.About.gender}</span>
+</div>
+<div className="about-item about-item-birthday">
+  <img src={BirthdayIcon} alt="Birthdate" className="about-icon" />
+  <span className="about-text">{`${gorilla.About.birthdate}`}</span>
+</div>
+<div className="about-item about-item-location">
+  <img src={LocationIcon} alt="Location" className="about-icon" />
+  <span className="about-text">{gorilla.About.location}</span>
+</div>
       </div>
     );
   };
