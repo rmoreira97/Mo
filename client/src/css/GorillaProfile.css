@@ -72,19 +72,29 @@
   visibility: visible;
 }
 
+
+
 .event {
   animation: fadeIn 1s forwards;
 }
 
 
 .profile-container {
-  display: flex;
+  display: inline-block;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 1000px; /* Adjust as necessary */
+  max-width: 6000px; /* Adjust as necessary */
   width: 100%; /* Ensure the container takes up the full width */
-  margin: auto;
-  margin-left: 200px;
+  overflow-x: hidden;
+  overflow-y: hidden; /* Hide horizontal scrollbar */
+  /* margin-left: -10px; */
+  flex-grow: 2;
+  margin: 0 auto;
+  /* take up entire viewport */  
+  margin-right: auto; /* Keep this to maintain the container in the center */
+  margin-left: calc(-50% + width/2 - desired_shift);
+  transform: translateX(-110px);
+
   background-color: #ececec; /* Light grey background */
 }
 

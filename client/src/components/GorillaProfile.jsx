@@ -281,6 +281,7 @@ default:
   }
 
   return (
+  
     <div className="profile-container">
       <div className="row">
         <div className="col-md-4">
@@ -297,6 +298,7 @@ default:
           {renderAboutSection()}
         </div>
       </div>
+      
     
         <div className="tabs">
   <button onClick={() => handleTabClick('profile')} className={`btn btn-outline-primary ${activeTab === 'profile' ? 'active-tab' : ''}`}>Profile</button>

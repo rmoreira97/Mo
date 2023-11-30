@@ -16,8 +16,10 @@ code {
 
 
 #root {
-  width: 100%; /* Ensure it takes the full width */
   display: flex;
-  justify-content: center; /* Center the content */
+  flex-direction: row;
+  justify-content: center; /* This will center the child elements */
   align-items: flex-start; /* Align items to the start of the flex container */
+  width: 100%; /* Full width of the viewport */
+  background-color: #ececec;
 }
