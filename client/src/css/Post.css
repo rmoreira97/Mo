@@ -1,0 +1,114 @@
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 300px;
+    margin-top: 20px;
+    width: 40%; /* Match the width of your UI's grey area */
+    gap: 8px; /* Space between elements */
+    margin-bottom: 20px; /* Space below the container */
+    background-color: #f0f2f5; /* Facebook's background color for status bar */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Consistent padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .text-input {
+    padding: 8px 12px;
+    border: 1px solid #ccd0d5; /* Facebook's border color */
+    border-radius: 18px; /* Larger radius for rounded edges */
+    font-size: 16px;
+    width: 100%; /* Full width */
+  }
+  
+  .file-upload-button {
+    padding: 8px 12px;
+    background-color: #e4e6eb; /* Slightly darker than container for contrast */
+    border: 1px solid #ccd0d5; /* Consistent with Facebook's style */
+    border-radius: 18px; /* Rounded like the text input */
+    cursor: pointer;
+    display: block; /* Use block to allow width manipulation */
+    text-align: center;
+    width: auto; /* Adjust width as necessary, or use 'auto' */
+  }
+  
+  .file-upload-button:hover {
+    background-color: #d8dadf; /* Slightly darker on hover for interaction feedback */
+  }
+  
+  .upload-button {
+    padding: 8px 12px;
+    background-color: #434344; /* Facebook's button color */
+    border: none;
+    border-radius: 18px; /* Match other inputs */
+    color: white;
+    cursor: pointer;
+    width: auto; /* Adjust to make it narrower */
+    align-self: center; /* Align button to the center */
+    font-weight: bold; /* Bold text */
+  }
+  
+  .upload-button:hover {
+    background-color: #165db6; /* Darker blue on hover */
+  }
+  
+  /* Posts list - full width */
+  .posts-list {
+    display: grid;
+    place-items: center;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeInLeft 1s ease both;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    margin-left: 30.5px;
+    margin-right: 20px;
+    padding: 20px;
+    text-align: justify;
+    ;
+  }
+  
+  .post-item {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 22.5px;
+    padding: 20px;
+    text-align: justify;
+    background-color: #ffffff;
+    border-radius: 10px;
+    z-index: 1;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;;
+  }
+
+
+
+  p.caption {
+    font-size: 20px;
+    font-family: Nunito;
+    font-weight: 600;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+
+  .post-image {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+
+  .post-video {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    padding: 10px; /* Or any value you see fit */
+    border-radius: 10px; /* Rounded corners */
+    margin: auto; /* Center video */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  }

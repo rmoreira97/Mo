@@ -8,7 +8,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/GorillaProfile.css';
 // import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 // import { storage } from '../firebaseConfig'; // Adjust the import path as necessary
-import { Post } from './Post'; // for named import // Assuming that both GorillaProfile.jsx and Post.jsx are in the same directory
+import { Post } from './Post';
+import Sidebar from './Sidebar'; // for named import // Assuming that both GorillaProfile.jsx and Post.jsx are in the same directory
 
 
 // SVG Icons
@@ -35,10 +36,6 @@ function GorillaProfile() {
   // const [file, setFile] = useState(null);
 
 
-
-
-
- 
 
 
   function FadeInSection(props) {
@@ -205,12 +202,6 @@ function GorillaProfile() {
             ))}
           </div>
         );
-      case 'videos':
-        return (
-          <div className="video-section">
-            <p>Videos coming soon...</p>
-          </div>
-        );
       
         
         case 'posts':
@@ -311,7 +302,7 @@ default:
   <button onClick={() => handleTabClick('profile')} className={`btn btn-outline-primary ${activeTab === 'profile' ? 'active-tab' : ''}`}>Profile</button>
   <button onClick={() => handleTabClick('gallery')} className={`btn btn-outline-primary ${activeTab === 'gallery' ? 'active-tab' : ''}`}>Gallery</button>
   <button onClick={() => handleTabClick('posts')} className={`btn btn-outline-primary ${activeTab === 'posts' ? 'active-tab' : ''}`}>Posts</button>
-  <button onClick={() => handleTabClick('videos')} className={`btn btn-outline-primary ${activeTab === 'videos' ? 'active-tab' : ''}`}>Videos</button>
+  
 </div>
     
 {renderContent()}

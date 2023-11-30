@@ -13,3 +13,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+#root {
+  width: 100%; /* Ensure it takes the full width */
+  display: flex;
+  justify-content: center; /* Center the content */
+  align-items: flex-start; /* Align items to the start of the flex container */
+}

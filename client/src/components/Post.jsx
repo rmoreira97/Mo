@@ -11,6 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState, useEffect, useCallback } from 'react';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import storage from '../firebaseConfig';
+import '../css/Post.css';
 
 function Post({ gorillaId }) {
   const [caption, setCaption] = useState('');
@@ -109,31 +110,33 @@ function Post({ gorillaId }) {
   };
 
   return (
-    <div>
+  <div>
+    <div className="input-container">
       <input
         type="text"
         placeholder="What's on your mind?"
         value={caption}
         onChange={handleCaptionChange}
+        className="text-input"
       />
-      <input type="file" onChange={handleFileChange} accept="image/*,video/*" />
-      <button onClick={uploadFile}>Upload Post</button>
-
-      <div className="posts-list">
-  {posts.map((post, index) => (
-    <div key={index} className="post-item">
-      <p>{post.Date}</p> {/* Use post.Date for the date */}
-      <p>{post.Caption}</p> {/* Use post.Caption for the caption */}
-      {post.Media && post.Media.Type === 'image' ? (
-        <img src={post.Media.Url} alt="Post" className="post-image" /> // Use post.Media.Url for the image URL
-      ) : (
-        <video controls src={post.Media.Url} className="post-video" /> // Use post.Media.Url for the video URL
-      )}
+      
+      <input id="file-input" type="file" onChange={handleFileChange} accept="image/*,video/*" className="file-input" />
+      <button onClick={uploadFile} className="upload-button">Upload</button>
     </div>
-  ))}
-</div>
+    <div className="posts-list">
+      {posts.map((post, index) => (
+        <div key={index} className="post-item">
+          <p className='caption'>{post.Caption}</p>
+          {post.Media && post.Media.Type === 'image' ? (
+            <img src={post.Media.Url} alt="Post" className="post-image" />
+          ) : (
+            <video controls src={post.Media.Url} className="post-video" />
+          )}
+        </div>
+      ))}
     </div>
-  );
+  </div>
+);
 }
 
 export { Post };

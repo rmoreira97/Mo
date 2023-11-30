@@ -81,11 +81,18 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 800px; /* Adjust as necessary */
+  max-width: 1000px; /* Adjust as necessary */
+  width: 100%; /* Ensure the container takes up the full width */
   margin: auto;
-  background-color: #f9f9f9; /* Light grey background */
+  margin-left: 200px;
+  background-color: #ececec; /* Light grey background */
 }
 
+
+.row {
+
+margin-left: 70px;
+}
 /* For larger screens where you want the profile image and details side by side */
 @media (min-width: 768px) {
   .profile-container {
@@ -94,6 +101,7 @@
     justify-content: center; /* Space out children */
     align-items: flex-start;
    gap: 2px;
+   margin-left: 250px;
 }
 }
 
@@ -311,7 +319,7 @@
 
 
 .gallery-preview {
-  animation: fadeIn 1s ease both; /* Added fade-in animation */
+  animation: slideInFromRight 5s ease both; /* Added fade-in animation */
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
@@ -338,7 +346,22 @@
   flex-wrap: wrap; /* Allow items to wrap to the next line */
   gap: 10px; /* Keep your gap if you want space between items */
   padding: 20px;
-  justify-content: space-around; /* Or space-between, depending on your layout */
+  justify-content: space-around;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 0 30px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Or space-between, depending on your layout */
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.img-fluid {
+  animation: slideInFromRight 2s ease both; /* Added fade-in animation */
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
 }
 
 .gallery-container::-webkit-scrollbar {
@@ -349,21 +372,23 @@
   flex: 1 1 auto; /* Adjust this to set the basis for each image */
   width: auto; /* Adjust the percentage for the number of items per row you want, minus the gap */
   height: auto; /* Keep the original aspect ratio */
-  margin-bottom: 10px; /* If you want space between rows */
+  margin-bottom: 20px;
+  margin-top: 20px; /* If you want space between rows */
 }
 
 .bio-section {
   animation: fadeInLeft 1s ease both;
   margin-top: 20px;
   margin-bottom: 10px;
-  margin-left: 22.5px;
-  padding: 20px;
+  margin-left: 112.5px;
+  padding: 25px;
   text-align: justify;
   background-color: #ffffff; /* Set bio background to white */
   border-radius: 10px; /* Rounded corners for the bio section */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds shadow for depth */
   max-width: 800px; /* Adjust as necessary */
-  width: 95%; /* Take the full width of the container */
+  max-height: 1000px;
+  width: 100%; /* Take the full width of the container */
   box-sizing: border-box; /* Include padding in the width */
 }
 
@@ -535,7 +560,7 @@ div.content h2 {
   display: flex;
   justify-content: flex-start; /* This will align the tabs to the right */
   padding: 10px; /* Adjust padding as needed */
-  /* Other styles you might need */
+  margin-left: 120px;
 }
 
 .tabs button {

@@ -36,72 +36,36 @@ def seed_database():
   {
     "PostID": "1",
     "Date": "2023-11-28 10:30 AM",
-    "Caption": "Enjoying a beautiful day at Kyoto City Zoo!",
+    "Caption": "They don't call her the best mother for nothing!",
     "Media": {
-      "Url": "https://example.com/post1.jpg",
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F1%2F22f5605389a3a577fb6ec6c602b092e0b77ab194.png?alt=media&token=ac515b67-288b-48ec-9175-2e279d716f7b",
       "Type": "image"
     }
   },
   {
     "PostID": "2",
     "Date": "2023-11-27 04:45 PM",
-    "Caption": "Family time with Genki and Kintaro!",
+    "Caption": "Reunited with Gentaro, many years ago..",
     "Media": {
-      "Url": "https://example.com/post2.jpg",
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F1%2FScreenshot%202023-11-28%20211734.jpg?alt=media&token=58f0f640-d26d-481a-96c1-d59ceba99cdb",
       "Type": "image"
     }
   },
   {
     "PostID": "3",
     "Date": "2023-11-26 08:15 AM",
-    "Caption": "Looking back at my journey at Kyoto City Zoo. #memories",
+    "Caption": "Kintaro loves to sleep on his mother..",
     "Media": {
-      "Url": "https://example.com/post3.jpg",
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F1%2Ff8f23ccd95eddfa17c6e9b28a38042c2cdd8f63d.png?alt=media&token=9dd43173-3231-417c-a4ee-2b211af8b57e",
       "Type": "image"
     }
   },
   {
     "PostID": "4",
     "Date": "2023-11-25 02:00 PM",
-    "Caption": "Just hanging out with Annie from Higashiyama Zoo!",
+    "Caption": "With Gentaro, years ago..",
     "Media": {
-      "Url": "https://example.com/post4.jpg",
-      "Type": "image"
-    }
-  },
-  {
-    "PostID": "5",
-    "Date": "2023-11-24 09:45 AM",
-    "Caption": "A sunny day with my gorilla friends. 🌞",
-    "Media": {
-      "Url": "https://example.com/post5.jpg",
-      "Type": "image"
-    }
-  },
-  {
-    "PostID": "6",
-    "Date": "2023-11-23 05:20 PM",
-    "Caption": "Exploring the jungle today. Such a fascinating place!",
-    "Media": {
-      "Url": "https://example.com/post6.jpg",
-      "Type": "image"
-    }
-  },
-  {
-    "PostID": "7",
-    "Date": "2023-11-22 11:10 AM",
-    "Caption": "Gorilla playtime! 🦍",
-    "Media": {
-      "Url": "https://example.com/post7.jpg",
-      "Type": "image"
-    }
-  },
-  {
-    "PostID": "8",
-    "Date": "2023-11-21 03:55 PM",
-    "Caption": "Relaxing in my favorite spot. Peace and tranquility. 🌿",
-    "Media": {
-      "Url": "https://example.com/post8.jpg",
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F1%2Fbaby-gorilla-at-kyoto-zoo.png?alt=media&token=d6a53f37-e670-4c49-90ba-c6c635545aa8",
       "Type": "image"
     }
   }
@@ -172,72 +136,72 @@ def seed_database():
   {
     "PostID": "1",
     "Date": "2023-11-28 10:30 AM",
-    "Caption": "Enjoying a beautiful day at Kyoto City Zoo!",
+    "Caption": "Can you guess who the leader of the group is?",
     "Media": {
-      "Url": "https://example.com/post1.jpg",
-      "Type": "image"
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F2%2FRPReplay_Final1600768532.mov?alt=media&token=65d90cae-0e69-446c-9c28-8225e579a76a",
+      "Type": "video"
     }
   },
   {
     "PostID": "2",
     "Date": "2023-11-27 04:45 PM",
-    "Caption": "Family time with Genki and Kintaro!",
+    "Caption": "A mighty fine lunch..",
     "Media": {
-      "Url": "https://example.com/post2.jpg",
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F2%2FIMG_0591.png?alt=media&token=fe4c7e63-2a17-484e-8910-8f03515b66ee",
       "Type": "image"
     }
   },
   {
     "PostID": "3",
     "Date": "2023-11-26 08:15 AM",
-    "Caption": "Looking back at my journey at Kyoto City Zoo. #memories",
+    "Caption": "Momotaro is impressed by his youngest son's drumming skills..",
     "Media": {
-      "Url": "https://example.com/post3.jpg",
-      "Type": "image"
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F2%2FRPReplay_Final1599737558.mov?alt=media&token=31dbe1ce-9e99-446a-a258-dece203db597",
+      "Type": "video"
     }
   },
   {
     "PostID": "4",
     "Date": "2023-11-25 02:00 PM",
-    "Caption": "Just hanging out with Annie from Higashiyama Zoo!",
+    "Caption": "Kintaro tends to stick around his father, Momotaro, a lot.",
     "Media": {
-      "Url": "https://example.com/post4.jpg",
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F2%2FIMG_4826.png?alt=media&token=39a3f5a8-081b-4ffd-8f91-7bf268448c2b",
       "Type": "image"
     }
   },
   {
     "PostID": "5",
     "Date": "2023-11-24 09:45 AM",
-    "Caption": "A sunny day with my gorilla friends. 🌞",
+    "Caption": "Boogers are a valid food source for gorillas, as they contain a lot of protein.",
     "Media": {
-      "Url": "https://example.com/post5.jpg",
-      "Type": "image"
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F2%2Fjoined_video_f5a0af9f7d074a7e8b35543b50e9fc83.mov?alt=media&token=142835e3-a244-41b5-b8ed-fccdfd1dd446",
+      "Type": "video"
     }
   },
   {
     "PostID": "6",
     "Date": "2023-11-23 05:20 PM",
-    "Caption": "Exploring the jungle today. Such a fascinating place!",
+    "Caption": "Momotaro loves to wear a blanket on his head for shade.",
     "Media": {
-      "Url": "https://example.com/post6.jpg",
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F2%2FIMG_5858.png?alt=media&token=07392aad-27a3-4b8d-ac1d-d9fee2a4a7ea",
       "Type": "image"
     }
   },
   {
     "PostID": "7",
     "Date": "2023-11-22 11:10 AM",
-    "Caption": "Gorilla playtime! 🦍",
+    "Caption": "Dozing off..",
     "Media": {
-      "Url": "https://example.com/post7.jpg",
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F2%2FIMG_3766.png?alt=media&token=dcabdfb0-e9ee-4f4b-b82b-58f8fcd3b34b",
       "Type": "image"
     }
   },
   {
     "PostID": "8",
     "Date": "2023-11-21 03:55 PM",
-    "Caption": "Relaxing in my favorite spot. Peace and tranquility. 🌿",
+    "Caption": "Return of the Jedi...",
     "Media": {
-      "Url": "https://example.com/post8.jpg",
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F2%2F00a9d231d189c0c879bc8df2ceccf311.jpg?alt=media&token=2656d9ba-7144-4a53-b3c2-93e831e73576",
       "Type": "image"
     }
   }
@@ -308,63 +272,63 @@ def seed_database():
   {
     "PostID": "2",
     "Date": "2023-11-27 04:45 PM",
-    "Caption": "Family time with Genki and Kintaro!",
+    "Caption": "Gentaro and his father...",
     "Media": {
-      "Url": "https://example.com/post2.jpg",
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F3%2FIMG_0898.png?alt=media&token=d9095276-8640-489c-885e-9e1aec6d9258",
       "Type": "image"
     }
   },
   {
     "PostID": "3",
     "Date": "2023-11-26 08:15 AM",
-    "Caption": "Looking back at my journey at Kyoto City Zoo. #memories",
+    "Caption": "Gentaro's studies, he's the most profilic mathematician in the family...",
     "Media": {
-      "Url": "https://example.com/post3.jpg",
-      "Type": "image"
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F3%2FRPReplay_Final1619373778.mov?alt=media&token=e6972539-ba24-4e2d-98fd-de69682802fa",
+      "Type": "video"
     }
   },
   {
     "PostID": "4",
     "Date": "2023-11-25 02:00 PM",
-    "Caption": "Just hanging out with Annie from Higashiyama Zoo!",
+    "Caption": "Deep in thought...",
     "Media": {
-      "Url": "https://example.com/post4.jpg",
-      "Type": "image"
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F3%2Fkleqwm.mp4?alt=media&token=741640be-3892-4ed7-9719-e17d26dbe27e",
+      "Type": "video"
     }
   },
   {
     "PostID": "5",
     "Date": "2023-11-24 09:45 AM",
-    "Caption": "A sunny day with my gorilla friends. 🌞",
+    "Caption": "A boy filled with wonder...",
     "Media": {
-      "Url": "https://example.com/post5.jpg",
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F3%2FIMG_1029.png?alt=media&token=2aec12f5-4d0e-409a-ab0d-88efa9f9643c",
       "Type": "image"
     }
   },
   {
     "PostID": "6",
     "Date": "2023-11-23 05:20 PM",
-    "Caption": "Exploring the jungle today. Such a fascinating place!",
+    "Caption": "Gentaro and his favorite playmate..",
     "Media": {
-      "Url": "https://example.com/post6.jpg",
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F3%2FIMG_0904.png?alt=media&token=74854594-4399-4385-81ac-5f387e9cd84e",
       "Type": "image"
     }
   },
   {
     "PostID": "7",
     "Date": "2023-11-22 11:10 AM",
-    "Caption": "Gorilla playtime! 🦍",
+    "Caption": "Hiding from the others..",
     "Media": {
-      "Url": "https://example.com/post7.jpg",
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F3%2FIMG_0899.png?alt=media&token=e79203fe-1b84-40f5-b62f-e8918677066c",
       "Type": "image"
     }
   },
   {
     "PostID": "8",
     "Date": "2023-11-21 03:55 PM",
-    "Caption": "Relaxing in my favorite spot. Peace and tranquility. 🌿",
+    "Caption": "Gentaro occasionally sucks his finger, a behavior he adopted as a child.",
     "Media": {
-      "Url": "https://example.com/post8.jpg",
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F3%2FIMG_0901.png?alt=media&token=65e8459a-5b8e-44ef-ac3f-0cfadb720a84",
       "Type": "image"
     }
   }
@@ -443,57 +407,77 @@ def seed_database():
   {
     "PostID": "3",
     "Date": "2023-11-26 08:15 AM",
-    "Caption": "Looking back at my journey at Kyoto City Zoo. #memories",
+    "Caption": "Drumming practice...",
     "Media": {
-      "Url": "https://example.com/post3.jpg",
-      "Type": "image"
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F4%2FRPReplay_Final1639960206.mov?alt=media&token=d56b3351-3851-4709-b7d2-db8ca156440f",
+      "Type": "video"
     }
   },
   {
     "PostID": "4",
     "Date": "2023-11-25 02:00 PM",
-    "Caption": "Just hanging out with Annie from Higashiyama Zoo!",
+    "Caption": "Did you get scared?",
     "Media": {
-      "Url": "https://example.com/post4.jpg",
-      "Type": "image"
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F4%2Ffccc4cb993ff4546a233144207b35152.mov?alt=media&token=01656bae-8c0f-4e26-b89e-e1d1d4a35314",
+      "Type": "video"
     }
   },
   {
     "PostID": "5",
     "Date": "2023-11-24 09:45 AM",
-    "Caption": "A sunny day with my gorilla friends. 🌞",
+    "Caption": "Whoops...",
     "Media": {
-      "Url": "https://example.com/post5.jpg",
-      "Type": "image"
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F4%2FRPReplay_Final1615244252.mov?alt=media&token=b1fe5f2d-0756-46b6-aceb-80a28422cd09",
+      "Type": "video"
     }
   },
   {
     "PostID": "6",
     "Date": "2023-11-23 05:20 PM",
-    "Caption": "Exploring the jungle today. Such a fascinating place!",
+    "Caption": "Bidepalism is my strong suit..",
     "Media": {
-      "Url": "https://example.com/post6.jpg",
-      "Type": "image"
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F4%2FIMG_6055.mov?alt=media&token=a48f9393-3bbb-46e6-a7cc-1438a72b19aa",
+      "Type": "video"
     }
   },
   {
     "PostID": "7",
     "Date": "2023-11-22 11:10 AM",
-    "Caption": "Gorilla playtime! 🦍",
+    "Caption": "Dad was still getting used to dealing with Kintaro..",
     "Media": {
-      "Url": "https://example.com/post7.jpg",
-      "Type": "image"
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F4%2FIMG_9691.mov?alt=media&token=735bd052-e579-43df-b644-fe74439b5419",
+      "Type": "video"
     }
   },
   {
     "PostID": "8",
     "Date": "2023-11-21 03:55 PM",
-    "Caption": "Relaxing in my favorite spot. Peace and tranquility. 🌿",
+    "Caption": "Kinatro came out victorious in the end..",
     "Media": {
-      "Url": "https://example.com/post8.jpg",
-      "Type": "image"
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F4%2Fvideo.mov?alt=media&token=7c865fea-3d6f-411a-ba97-6c1f1d544aac",
+      "Type": "video"
+    }
+  },
+   {
+    "PostID": "9",
+    "Date": "2023-11-28 10:30 AM",
+    "Caption": "Kintaro's bipedalism is getting better!",
+    "Media": {
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F4%2FRPReplay_Final1693593579.mov?alt=media&token=79ee1c6c-c305-4a31-a432-191d7c8ae508",
+      "Type": "video"
+    }
+  },
+  {
+    "PostID": "10",
+    "Date": "2023-11-27 04:45 PM",
+    "Caption": "Kintaro's drumming was still in its early stages..",
+    "Media": {
+      "Url": "https://firebasestorage.googleapis.com/v0/b/mofamily-4c06a.appspot.com/o/posts%2F4%2FRPReplay_Final1608107672.mov?alt=media&token=fffd9b47-e73b-4107-8f65-00ecce0f5f3b",
+      "Type": "video"
     }
   }
+
+ 
 
 ],
    "Bio":{
