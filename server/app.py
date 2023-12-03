@@ -11,16 +11,15 @@ load_dotenv()
 def create_app():
     app = Flask(__name__)
 
+
     # Set up the Flask app configuration using environment variables
     app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('SQLALCHEMY_DATABASE_URI')
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     CORS(app)
     db.init_app(app)
-    return app
 
     with app.app_context():
         db.create_all()
- 
 
     @app.route('/')
     def hello():
@@ -111,8 +110,9 @@ def create_app():
             else:
                 return jsonify({'message': 'Invalid JSON data'}), 400
 
-    
+    return app
+
+flask_app = create_app()
 
 if __name__ == '__main__':
-    app = create_app()
-    app.run()
+    flask_app.run()
