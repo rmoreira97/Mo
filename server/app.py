@@ -16,9 +16,11 @@ def create_app():
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     CORS(app)
     db.init_app(app)
+    return app
 
     with app.app_context():
         db.create_all()
+ 
 
     @app.route('/')
     def hello():
@@ -109,8 +111,8 @@ def create_app():
             else:
                 return jsonify({'message': 'Invalid JSON data'}), 400
 
-    return app
+    
 
 if __name__ == '__main__':
     app = create_app()
-    app.run(debug=True)
+    app.run()
