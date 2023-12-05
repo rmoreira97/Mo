@@ -1,20 +1,22 @@
-# seed.py
-from app import create_app
-from extensions import db
-from models import MomoFamily
-from datetime import datetime
-import json
+const mongoose = require('mongoose');
+const MomoFamily = require('./models'); // Replace with the actual path to your model file
 
-app = create_app()
+// Define the MongoDB connection URI
+const mongoURI = 'mongodb://localhost:27017/gorillas';
 
-def seed_database():
-    with app.app_context():  # Enter the application context
-        db.create_all()  # Create the database tables (only do this once, not every time you seed)
+// Function to seed the database
+async function seedDatabase() {
+  try {
+    // Connect to MongoDB
+    await mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
 
-        # Define your data here...
-        data = [
-   
- {
+
+
+    const data = [
+
+
+      {
+   "ID": 1,
    "Name":"Genki",
    "About":{
       "role":[
@@ -112,7 +114,8 @@ def seed_database():
       ]
    }
 },
-{
+{   
+   "ID": 2,
    "Name":"Momotaro",
    "About":{
       "role":[
@@ -239,7 +242,7 @@ def seed_database():
       ]
    }
 },
-{
+{  "ID": 3, 
    "Name":"Gentaro",
    "About":{
       "role":[
@@ -366,8 +369,9 @@ def seed_database():
       ]
    }
 },
-{
-   "Name":"Kintaro",
+{     
+   "ID": 4, 
+   "Name":"Kintaro", 
    "About":{
       "role":[
          "Son",
@@ -501,23 +505,19 @@ def seed_database():
    }
 }
 ]
-# Seed the data into the database
-        for item in data:
-            # Check if 'Posts' key exists in the dictionary
-            if 'Posts' in item:
-                # Convert the "Posts" field to JSON format if it exists
-               posts_data = item['Posts']
-            else:
-                # Handle the case where 'Posts' key does not exist
-                posts_data = []  # Assign an empty list if 'Posts' is not present
-            
-            gorilla = MomoFamily(**item)
-            db.session.add(gorilla)
 
-        db.session.commit()  # Commit the changes to the database
-        db.session.close()  # Close the database session
 
-    print("Database seeded successfully!")
+ // Insert data into the database
+ await MomoFamily.insertMany(data);
 
-if __name__ == '__main__':
-    seed_database()
+ console.log('Database seeded successfully.');
+} catch (error) {
+ console.error('Error seeding database:', error);
+} finally {
+ // Disconnect from MongoDB
+ await mongoose.disconnect();
+}
+}
+
+// Call the seedDatabase function to seed the database
+seedDatabase();
