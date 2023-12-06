@@ -12,7 +12,7 @@ function Post({ gorillaId }) {
     console.log('Fetching posts for gorillaId:', gorillaId);
   
     try {
-      const response = await fetch(`http://localhost:3001/api/gorillas/${gorillaId}/posts`);
+      const response = await fetch(`http://moback.onrender.com/api/gorillas/${gorillaId}/posts`);
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -73,7 +73,7 @@ function Post({ gorillaId }) {
           body: JSON.stringify(newPost),
         };
 
-        return fetch(`http://localhost:3001/api/gorillas/${gorillaId}/addPost`, requestOptions);
+        return fetch(`http://moback.onrender.com/addPost`, requestOptions);
       })
       .then(response => {
         if (!response.ok) {
