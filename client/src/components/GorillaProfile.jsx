@@ -80,7 +80,7 @@ function GorillaProfile() {
       return;
     }
 
-    fetch(`http://localhost:3001/api/gorillas/${gorillaID}`)
+    fetch('https://momotaro.onrender.com/api/gorillas/${id}')
       .then(response => response.json())
       .then(data => {
         if (data && data.gorilla) {
