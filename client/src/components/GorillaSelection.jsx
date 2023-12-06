@@ -25,7 +25,7 @@ function GorillaSelection() {
 
   // Function to navigate to the correct route
   const navigateToAPIEndpoint = (gorillaId) => {
-    navigate(`/gorillas/${gorillaId}`); // Use the correct route here
+    navigate(`/api/gorillas/${gorillaId}`); // Use the correct route here
   };
 
   return (
