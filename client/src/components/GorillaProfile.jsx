@@ -77,27 +77,29 @@ function GorillaProfile() {
   
   
   useEffect(() => {
-    const gorillaId = parseInt(id, 10);
-    if (isNaN(gorillaId)) {
+    const gorillaID = parseInt(id, 10);
+    if (isNaN(gorillaID)) {
       setError('Invalid Gorilla ID.');
       setLoading(false);
       return;
     }
 
-    fetch(`http://127.0.0.1:5000/api/gorillas/${gorillaId}`)
+    fetch(`http://localhost:3001/api/gorillas/${gorillaID}`)
       .then(response => response.json())
       .then(data => {
-        console.log('Received data:', data); // Log the data object
-        setGorilla(data);
-        setEditedGallery(data.Gallery || []);
+        if (data && data.gorilla) {
+          setGorilla(data.gorilla);
+          setEditedGallery(data.gorilla.Gallery || []);
+        } else {
+          throw new Error('Gorilla data not found');
+        }
         setLoading(false);
       })
       .catch(error => {
         setError(error.message);
         setLoading(false);
       });
-  }, [id]);
-
+  }, [id]); 
 
   
   const openEditor = () => {
@@ -124,7 +126,7 @@ function GorillaProfile() {
       Gallery: editedGallery,
     };
 
-    fetch(`http://127.0.0.1:5000/api/gorillas/${gorilla.ID}`, {
+    fetch(`http://localhost:3001/api/gorillas/${gorilla.ID}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -375,4 +377,5 @@ default:
   );
 }
 
-                export default GorillaProfile;
+
+export default GorillaProfile;

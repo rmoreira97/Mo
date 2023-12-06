@@ -2,7 +2,7 @@ import React, { useRef, Suspense, useState } from 'react';
 import { Canvas, useFrame, useLoader } from 'react-three-fiber';
 import { TextureLoader, DoubleSide } from 'three';
 import { useNavigate } from 'react-router-dom';
-import '../css/GorillaSelection.css'; // Ensure this path matches your CSS file's location
+import '../css/GorillaSelection.css';
 
 function GorillaSelection() {
   const navigate = useNavigate();
@@ -16,11 +16,16 @@ function GorillaSelection() {
 
   // Handler for the wheel event
   const handleWheel = (event) => {
-    if (event.deltaY > 0) { // User is scrolling down
+    if (event.deltaY > 0) {
       setIsBackButtonVisible(true);
     } else if (event.deltaY < 0 && window.scrollY === 0) {
       setIsBackButtonVisible(false);
     }
+  };
+
+  // Function to navigate to the correct route
+  const navigateToAPIEndpoint = (gorillaId) => {
+    navigate(`/gorilla/${gorillaId}`); // Use the correct route here
   };
 
   return (
@@ -30,18 +35,18 @@ function GorillaSelection() {
         <directionalLight intensity={0.8} position={[2, 2, 2]} />
         <Suspense fallback={null}>
           {gorillaImages.map((gorilla, index) => (
-            <GorillaImage 
-              key={index} 
-              image={gorilla.url} 
+            <GorillaImage
+              key={index}
+              image={gorilla.url}
               position={[-2 + index * 1.0, 0, 0]}
-              onClick={() => navigate(`/gorilla/${gorilla.id}`)}
+              onClick={() => navigateToAPIEndpoint(gorilla.id)}
             />
           ))}
         </Suspense>
       </Canvas>
-      <button 
-        className="back-button" 
-        style={{ opacity: isBackButtonVisible ? 1 : 0, transition: 'opacity 0.5s' }} 
+      <button
+        className="back-button"
+        style={{ opacity: isBackButtonVisible ? 1 : 0, transition: 'opacity 0.5s' }}
         onClick={() => navigate('/')}
       >
         Back
@@ -52,29 +57,25 @@ function GorillaSelection() {
 
 function GorillaImage({ image, position, onClick }) {
   const meshRef = useRef();
-  const [isHovered, setIsHovered] = useState(false); // State to track hover
+  const [isHovered, setIsHovered] = useState(false);
   const texture = useLoader(TextureLoader, image);
 
   useFrame(() => {
     if (!isHovered) {
-      meshRef.current.rotation.y += 0.003; // Rotate only if not hovered
+      meshRef.current.rotation.y += 0.003;
     }
   });
 
   return (
-    <mesh 
-      position={position} 
-      ref={meshRef} 
+    <mesh
+      position={position}
+      ref={meshRef}
       onClick={onClick}
-      onPointerOver={() => setIsHovered(true)} // Set hover state to true
-      onPointerOut={() => setIsHovered(false)} // Set hover state to false
+      onPointerOver={() => setIsHovered(true)}
+      onPointerOut={() => setIsHovered(false)}
     >
       <planeGeometry args={[1, 1]} />
-      <meshBasicMaterial 
-        map={texture} 
-        transparent={true} 
-        side={DoubleSide} // Use double-sided material
-      />
+      <meshBasicMaterial map={texture} transparent={true} side={DoubleSide} />
     </mesh>
   );
 }
