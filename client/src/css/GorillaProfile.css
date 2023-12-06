@@ -180,7 +180,7 @@ margin-left: 70px;
 }
 
 .profile-image-container {
-  position: relative;
+  position: absolute;
   /* No need to set width and height here unless you want to constrain the size of the container */
 }
 .profile-image {
@@ -193,6 +193,7 @@ margin-left: 70px;
   border-radius: 40%;
   margin-top: 10px;
   margin-left: 2px;
+  transform: translateY(-10%);
 
 }
 
@@ -219,8 +220,8 @@ margin-left: 70px;
 
 
 .col-md-4, .col-md-8 {
-  flex: 3; /* Allow both columns to grow equally */
-  margin: 4.4rem; /* Add some space around */
+  flex: 1; /* Allow both columns to grow equally */
+  margin: 3rem; /* Add some space around */
 }
 /* Assuming this is for a Bootstrap column within a row */
 .col-md-8 {
@@ -235,7 +236,7 @@ margin-left: 70px;
   margin: 1rem; /* Space around the column */
   overflow: hidden; /* Ensures nothing spills out of the border-radius */
   position: relative;
-  margin-top: -110px;
+  margin-top: -95px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-left-radius: 20px; /* Adjust as necessary for desired curvature */
