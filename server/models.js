@@ -24,10 +24,12 @@ const momoFamilySchema = new mongoose.Schema({
   Bio: {
     Feature: String
   },
-  Timeline: [{ // Embedded document for timeline events
-    event_date: String,
-    event_description: String
-  }]
+  Timeline: {
+    Events: [{
+      event_date: String,
+      event_description: String
+    }]
+  }
 });
 
 const MomoFamily = mongoose.model('MomoFamily', momoFamilySchema);

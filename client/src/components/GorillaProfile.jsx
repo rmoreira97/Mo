@@ -1,15 +1,11 @@
 // GorillaProfile.js
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/GorillaProfile.css';
 // import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 // import { storage } from '../firebaseConfig'; // Adjust the import path as necessary
 import { Post } from './Post';
-import Sidebar from './Sidebar'; // for named import // Assuming that both GorillaProfile.jsx and Post.jsx are in the same directory
 
 
 // SVG Icons
@@ -101,49 +97,7 @@ function GorillaProfile() {
       });
   }, [id]); 
 
-  
-  const openEditor = () => {
-    setIsEditing(true);
-    
-    setEditedGallery(gorilla.Gallery);
-  };
-  const closeEditor = () => setIsEditing(false);
-
-  
-  const handleNewGalleryUrlChange = (e) => setNewGalleryUrl(e.target.value);
-
-  const handleAddGalleryUrl = () => {
-    if (newGalleryUrl.trim() !== '') {
-      setEditedGallery([...editedGallery, newGalleryUrl]);
-      setNewGalleryUrl('');
-    }
-  };
-
-  const saveChanges = () => {
-    // Assuming your backend expects an object with Bio and Gallery properties
-    const updatedGorilla = {
-      ...gorilla,
-      Gallery: editedGallery,
-    };
-
-    fetch(`http://localhost:3001/api/gorillas/${gorilla.ID}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(updatedGorilla),
-    })
-      .then(response => response.json())
-      .then(data => {
-        setGorilla(data);
-        setIsEditing(false);
-      })
-      .catch(error => {
-        setError('Error updating gorilla');
-        console.error('Error updating gorilla:', error);
-      });
-  };
-
+ 
   
 
   const handleTabClick = (tab) => {
@@ -311,63 +265,7 @@ default:
     
 {renderContent()}
 
-{isAdmin && (
-  <Button variant="primary" onClick={openEditor} className="edit-profile-btn">
-    Edit Profile
-  </Button>
-)}
 
-<Modal show={isEditing} onHide={closeEditor} size="lg">
-  <Modal.Header closeButton>
-    <Modal.Title>Gallery Editor</Modal.Title>
-  </Modal.Header>
-  <Modal.Body>
-    <Form>
-    
-      
-      <Form.Group controlId="formGallery">
-        <Form.Label>Gallery URLs</Form.Label>
-        {editedGallery.map((url, index) => (
-          <div key={index} className="d-flex align-items-center mb-2">
-            <Form.Control
-              type="text"
-              value={url}
-              readOnly
-              className="me-2"
-            />
-            <Button variant="danger" onClick={() => {
-              setEditedGallery(editedGallery.filter((_, i) => i !== index));
-            }}>
-              Remove
-            </Button>
-          </div>
-        ))}
-        <div className="d-flex align-items-center">
-          <Form.Control
-            type="text"
-            value={newGalleryUrl}
-            onChange={handleNewGalleryUrlChange}
-            placeholder="Enter new image URL"
-            className="me-2"
-          />
-          <Button variant="success" onClick={handleAddGalleryUrl}>
-            Add
-          </Button>
-        </div>
-      </Form.Group>
-      {/* Buttons inside the form at the end of the modal body */}
-      <div className="modal-footer-buttons">
-    <Button variant="secondary" onClick={closeEditor} className="btn-close me-2">
-     
-    </Button>
-    <Button variant="primary" onClick={saveChanges} className="btn-save">
-      Save Changes
-    </Button>
-      </div>
-    </Form>
-  </Modal.Body>
-</Modal>
-  
       <div className="back-button-container">
         <Link to="/selection" className="btn btn-primary">
           Back
