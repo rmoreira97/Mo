@@ -80,22 +80,27 @@ function GorillaProfile() {
       return;
     }
 
-    fetch('https://momotaro.onrender.com/api/gorillas/${id}')
-      .then(response => response.json())
-      .then(data => {
-        if (data && data.gorilla) {
-          setGorilla(data.gorilla);
-          setEditedGallery(data.gorilla.Gallery || []);
-        } else {
-          throw new Error('Gorilla data not found');
-        }
-        setLoading(false);
-      })
-      .catch(error => {
-        setError(error.message);
-        setLoading(false);
-      });
-  }, [id]); 
+    fetch(`https://momotaro.onrender.com/api/gorillas/${id}`)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    if (data && data.gorilla) {
+      setGorilla(data.gorilla);
+      setEditedGallery(data.gorilla.Gallery || []);
+    } else {
+      throw new Error('Gorilla data not found');
+    }
+    setLoading(false);
+  })
+  .catch(error => {
+    setError(error.message);
+    setLoading(false);
+  });
+}, [id]);
 
  
   
