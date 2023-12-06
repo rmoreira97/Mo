@@ -80,7 +80,7 @@ function GorillaProfile() {
       return;
     }
 
-    fetch(`https://momotaro.onrender.com/api/gorillas/${id}`)
+    fetch(`https://moback.onrender.com/api/gorillas/${id}`)
   .then(response => {
     if (!response.ok) {
       throw new Error('Network response was not ok');
