@@ -103,70 +103,6 @@
 
 margin-left: 70px;
 }
-/* For larger screens where you want the profile image and details side by side */
-@media (min-width: 768px) {
-  .profile-container {
-    display: flex;
-    flex-direction: start;
-    justify-content: center; /* Space out children */
-    align-items: flex-start;
-   gap: 2px;
-   margin-left: 250px;
-}
-}
-
-@media (max-width: 700px) {
-
-  .cover-photo {
-    width: 99.5%;
-    height: 99%;
-    object-fit: cover;
-    object-position: center;
-    border-bottom-left-radius: 70% 10%; /* Decreased vertical radius */
-    border-bottom-right-radius: 50% 10%; /* Decreased vertical radius */
-    min-height: 100px;
-  }
-
-
-
-  .about-section {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    width: 100%; /* Ensure the section is full width */
-    padding: 10px; /* Consistent padding around the section */
-    box-sizing: border-box; /* Include padding in width calculation */
-  }
-  
-  .about-name,
-  .about-role {
-    text-align: center; /* Center the text */
-    width: 100%; /* Full width to align with the parent's width */
-    margin-bottom: 5px;
-    margin-right: 635px; /* Space between the name/role and the items below */
-  }
-  
-  .about-item {
-    display: flex;
-    justify-content: space-around; /* Evenly distribute items across the space */
-    align-items: center; /* Align items vertically */
-    width: 100%; /* Take up the full width of the parent */
-    margin-bottom: 5px; /* Space between each item */
-  }
-  
-  
-  .about-text {
-    display: inline-flex; /* Display inline-flex to keep icon and text aligned */
-    align-items: center;
-    margin-right: 300px /* Align icon and text vertically */
-  }
-  
-  .about-text
-  .about-icon {
-    margin-right: 3px; /* Space after the icon */
-  }/* Spacing between icon and text, adjust as needed */
-  
-}
 
 /* dddadadaadad */
 
@@ -879,6 +815,71 @@ line-height: normal;
     margin-top: 8px;
   }
 
+/* For larger screens where you want the profile image and details side by side */
+@media (min-width: 768px) {
+  .profile-container {
+    display: flex;
+    flex-direction: start;
+    justify-content: center; /* Space out children */
+    align-items: flex-start;
+   gap: 2px;
+   margin-left: 250px;
+}
+}
+
+@media (max-width: 700px) {
+
+  .cover-photo {
+    width: 99.5%;
+    height: 99%;
+    object-fit: cover;
+    object-position: center;
+    border-bottom-left-radius: 70% 10%; /* Decreased vertical radius */
+    border-bottom-right-radius: 50% 10%; /* Decreased vertical radius */
+    min-height: 100px;
+  }
+
+
+
+  .about-section {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    width: 100%; /* Ensure the section is full width */
+    padding: 10px; /* Consistent padding around the section */
+    box-sizing: border-box; /* Include padding in width calculation */
+  }
+  
+  .about-name,
+  .about-role {
+    text-align: center; /* Center the text */
+    width: 100%; /* Full width to align with the parent's width */
+    margin-bottom: 5px;
+    margin-right: 635px; /* Space between the name/role and the items below */
+  }
+  
+  .about-item {
+    display: flex;
+    justify-content: space-around; /* Evenly distribute items across the space */
+    align-items: center; /* Align items vertically */
+    width: 100%; /* Take up the full width of the parent */
+    margin-bottom: 5px; /* Space between each item */
+  }
+  
+  
+  .about-text {
+    display: inline-flex; /* Display inline-flex to keep icon and text aligned */
+    align-items: center;
+    margin-right: 300px /* Align icon and text vertically */
+  }
+  
+  .about-text
+  .about-icon {
+    margin-right: 3px; /* Space after the icon */
+  }/* Spacing between icon and text, adjust as needed */
+  
+}
+
 
   /* Adjustments for smaller screens */
   @media (max-width: 768px) {
@@ -892,3 +893,157 @@ line-height: normal;
     }
   }
   
+
+  /* Adjustments for iPhone 14 */
+  @media (max-width: 431px) {
+    .modal-content {
+      margin: 10px;
+    }
+  
+    .gallery-image-preview {
+      width: 60px;
+      height: 60px;
+    }
+    .profile-container {
+      display: flex;
+      align-items: flex-start;
+      max-width: 6000px;
+      width: 100%;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      margin-left: -10px;
+      flex-grow: 2;
+      margin: -7px auto;
+      margin-right: auto;
+      margin-left: calc(-50% + width/2 - desired_shift);
+      transform: translateX(-54px);
+      background-color: #ececec;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      flex-direction: column;
+  }
+  
+    .bio-section {
+      animation: fadeInLeft 1s ease both;
+      margin-top: 13px;
+      margin-bottom: 14px;
+      margin-left: 84.5px;
+      padding: 25px;
+      text-align: justify;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      max-width: 344px;
+      max-height: 462px;
+      width: 100%;
+      box-sizing: border-box;
+  }
+
+  .profile-image {
+    border-radius: 0;
+    border-radius: 40%;
+    box-shadow: -2px 6px 8px #6e6b56;
+    height: 115px;
+    margin-left: 2px;
+    margin-top: 10px;
+    object-fit: cover;
+    position: relative;
+    transform: translateY(10%);
+    width: 101px;
+  }
+
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+    margin-left: 243px;
+    margin-bottom: -93px;
+    margin-top: -154px;
+}
+
+  .about-name {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-bottom: 0.5em;
+      z-index: 2;
+      margin-top: 17px;
+      margin-left: -90px;
+      position: absolute;
+      font-family: Nunito;
+      font-weight: 700;
+      font-style: italic;
+  }
+  
+  .about-role {
+      font-size: 16px;
+      color: #5C4F5C;
+      margin-bottom: 1em;
+      margin-top: 45px;
+      margin-left: -86px;
+      position: absolute;
+      font-family: Nunito;
+      font-weight: 400;
+      font-style: normal;
+      line-height: normal;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 30px; /* Provide some space on the left for the line */
+    margin-left: 80px;  /* Represent the timeline line */
+  }
+
+  /* Hide the left-pointing before/after pseudo-elements */
+  .container.left::before,
+  .container.left::after,
+  .container.right::before,
+  .container.right::after {
+    content: none;
+  }
+
+  /* Adjust the container for the timeline content */
+  .container {
+    width: calc(100% - 150px); /* Full width minus padding for the line */
+    margin-bottom: 10px; /* Space between entries */
+  }
+
+  /* Force all content to the right of the timeline */
+  .container.left, 
+  .container.right {
+    align-items: flex-start; /* Align to the start of the flex container */
+  }
+
+  /* Adjust the content within the container */
+  .content {
+    margin-left: 10px; /* Space from the timeline */
+    padding: 2px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Ensure that fade-in animation sections are visible */
+  .fade-in-section.is-visible {
+    opacity: 1; /* Adjust as needed for your fade-in effect */
+    transform: none; /* Reset any transformations */
+  }
+
+  .right {
+    left: 40%;
+    padding: 2px;
+  }
+
+  .left {
+    left: -20%;
+    padding: 3px;
+  }
+}
+
+
+
+
+
