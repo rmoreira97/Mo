@@ -184,16 +184,16 @@ margin-left: 70px;
   /* No need to set width and height here unless you want to constrain the size of the container */
 }
 .profile-image {
-  border-radius: 0%; /* Remove rounding to make it square */
-  width: 190px; /* Set a fixed width */
-  height: 200px; /* Set a fixed height to match the width for a square */
-  object-fit: cover; /* This will cover the area without stretching the image */
-  box-shadow: 0px 4px 8px #6E6B56; /* This adds the drop shadow */
-  position: relative;
+  border-radius: 0;
   border-radius: 40%;
-  margin-top: 10px;
+  box-shadow: -2px 6px 8px #6e6b56;
+  height: 200px;
   margin-left: 2px;
+  margin-top: 10px;
+  object-fit: cover;
+  position: relative;
   transform: translateY(-10%);
+  width: 197px;
 
 }
 
@@ -208,13 +208,13 @@ margin-left: 70px;
 }
 
 .cover-photo {
-  width: 99.5%;
+  border-bottom-left-radius: 70% 10%;
+  border-bottom-right-radius: 50% 10%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 10%;
-  border-bottom-left-radius: 70% 10%; /* Increased the vertical radius */
-  border-bottom-right-radius: 50% 10%; /* Increased the vertical radius */
   min-height: 110px;
+  object-fit: cover;
+  object-position: inherit;
+  width: 99.5%;
 }
 
 
@@ -233,10 +233,9 @@ margin-left: 70px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
   font-family: 'Roboto', sans-serif; /* Roboto font for modern look */
   font-weight: 400; /* Normal font weight */
-  margin: 1rem; /* Space around the column */
+  margin: -95px 1rem -0.5rem; /* Space around the column */
   overflow: hidden; /* Ensures nothing spills out of the border-radius */
   position: relative;
-  margin-top: -95px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-left-radius: 20px; /* Adjust as necessary for desired curvature */
