@@ -1045,7 +1045,7 @@ line-height: normal;
 
 
 /* Adjustments for iPhone 12 */
-@media (max-width: 391px) {
+@media (max-width: 393px) {
   .modal-content {
     margin: 10px;
   }
@@ -1148,8 +1148,8 @@ line-height: normal;
   animation: fadeInLeft 1s ease both;
   margin-top: -40px;
   margin-bottom: 2px;
-  margin-left: 37.5px;
-  margin-right: -23px;
+  margin-left: 59.5px;
+  margin-right: -14px;
   padding: 29px;
   text-align: justify;
 }
