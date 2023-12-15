@@ -115,16 +115,13 @@
 
   @media (max-width: 431px) {
     .posts-list {
+      animation: fadeInLeft 1s ease both;
       display: grid;
-      place-items: center;
       flex-direction: column;
       justify-content: center;
-      animation: fadeInLeft 1s ease both;
-      margin-top: -5px;
-      margin-bottom: 10px;
-      margin-left: 46.5px;
-      margin-right: -9px;
+      margin: -30px -15px 7px 49.5px;
       padding: 20px;
+      place-items: center;
       text-align: justify;
     }
   }
