@@ -493,10 +493,7 @@ div.content h2 {
     text-align: center;
   }
 
-  .left .content, .right .content {
-    width: calc(100% - 80px); /* Adjust content width on smaller screens */
-    margin: 0 auto;
-  }
+
 }
 
 /* Your custom button styles */
@@ -1035,11 +1032,13 @@ line-height: normal;
   .right {
     left: 40%;
     padding: 2px;
+    width: 50%;
   }
 
   .left {
-    left: -20%;
-    padding: 3px;
+    left: -12%;
+    padding: 1px;
+    width: 50%;
   }
 
   .tabs {
@@ -1088,7 +1087,7 @@ line-height: normal;
     transition: transform 0.3s ease;
     margin-top: 10px;
   }
-  
+
 }
 
 
