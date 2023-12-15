@@ -66,4 +66,14 @@ body, html {
   }
   
   
+  @media (min-width: 431px) {
+    .gorilla-container {
+      height: 100vh;
+    }
   
+    .back-button {
+      top: calc(100% - 20px); /* Adjust as needed */
+      padding: 20px 40px;
+      font-size: 48px;
+    }
+  }
