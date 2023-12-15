@@ -924,18 +924,18 @@ line-height: normal;
   
     .bio-section {
       animation: fadeInLeft 1s ease both;
-      margin-top: 13px;
-      margin-bottom: 14px;
-      margin-left: 85.5px;
-      padding: 11px;
-      text-align: justify;
-      background-color: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      max-width: 326px;
-      max-height: 3000px;
-      width: 100%;
-      box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px #0000001a;
+    box-sizing: border-box;
+    margin-bottom: 14px;
+    margin-left: 83.5px;
+    margin-top: 13px;
+    max-height: 3028px;
+    max-width: 302px;
+    padding: 11px;
+    text-align: justify;
+    width: 100%;
   }
 
   .profile-image {
