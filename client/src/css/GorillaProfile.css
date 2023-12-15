@@ -1030,13 +1030,13 @@ line-height: normal;
   }
 
   .right {
-    left: 44%;
+    left: 43%;
     padding: 2px;
     width: 50%;
   }
 
   .left {
-    left: -12%;
+    left: -14%;
     padding: 1px;
     width: 50%;
   }
@@ -1226,6 +1226,13 @@ p.caption {
   transition: transform 0.3s ease;
   margin-top: 10px;
 }
+
+.right {
+  left: 42%;
+  padding: 2px;
+  width: 50%;
+}
+
 
 }
 
